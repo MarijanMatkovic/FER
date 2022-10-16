@@ -1,0 +1,78 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Flowers"
+        },
+        {
+            "id": 2,
+            "name": "Tools"
+        },
+        {
+            "id": 3,
+            "name": "Pots"
+        },
+        {
+            "id": 4,
+            "name": "Seed"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Tulip",
+            "price": 10.00,
+            "categoryId": 1,
+            "imageUrl": "images/tulip.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Lavender",
+            "price": 15.00,
+            "categoryId": 1,
+            "imageUrl": "images/lavender.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Fuchsia",
+            "price": 50.00,
+            "categoryId": 1,
+            "imageUrl": "images/fuchsia.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Daisy",
+            "price": 30.00,
+            "categoryId": 1,
+            "imageUrl": "images/daisy.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Shovel",
+            "price": 150.00,
+            "categoryId": 2,
+            "imageUrl": "images/shovel.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Small shovel",
+            "price": 50.00,
+            "categoryId": 2,
+            "imageUrl": "images/smallshovel.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Rake",
+            "price": 100.00,
+            "categoryId": 2,
+            "imageUrl": "images/rake.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Tulip (1kg)",
+            "price": 200.00,
+            "categoryId": 4,
+            "imageUrl": "images/tulipseed.jpg"
+        }
+    ]
+}

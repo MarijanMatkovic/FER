@@ -1,0 +1,26 @@
+.inventory-container {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item-container {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.scaled-item-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-title {
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+}

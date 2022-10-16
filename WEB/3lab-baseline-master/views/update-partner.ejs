@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<%- include(`partials/head`); %>
+
+<body class="content">
+
+<%- include(`partials/header`); %>
+
+<main class="main">
+
+	<!-- INSERT CODE HERE -->
+	
+    <div class="centered-container">
+        <h1 class="decorated-title font-secondary main-color">Update Partner
+            <span class="main-color-emphasized"> <%= partners.name %> </span> </h1>
+        <div class="separator"></div>
+    </div>
+
+    <section class="section secondary-color-bg">
+        <div class="container">
+			<form action="/partners/update-partner" method="post">
+                <fieldset class="fieldset">
+                    <div class="label-input">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" size="30" placeholder="<%= partners.name %>">
+                    </div>
+                    <div class="label-input">
+                        <label for="owner_name">Owner name: </label>
+                        <input type="text" name="owner_name" id="owner_name" size="30" placeholder="<%= partners.owner_name %>">
+                    </div>
+                    <div class="label-input">
+                        <label for="owner_surname">Owner surname: </label>
+                        <input type="text" name="owner_surname" id="owner_surname" size="30" placeholder="<%= partners.owner_surname %>">
+                    </div>
+                    <div class="label-input">
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" id="email" size="30" placeholder="<%= partners.email%>">
+                    </div>
+                    <div class="label-input">
+                        <label for="partnersince">Partner since: </label>
+                        <input type="number" name="partnersince" id="partnersince" size="30" placeholder="<%= partners.partnersince %>">
+                    </div>
+					<div class="label-input">
+                        <label for="id">Partner for: </label>
+                        <%- include(`partials/_select`); %>
+                    </div>
+                    <hr>
+                    <div class="submitButtons">
+                        <input type="submit" class="btn" >
+                        <input type="reset" class="btn" >
+                    </div>
+                </fieldset>
+            </form>
+		</div>
+    </section>
+	
+</main>
+
+<%- include(`partials/footer`); %>
+
+</body>
+
+</html>

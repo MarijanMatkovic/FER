@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+<%- include(`partials/head`); %>
+
+<body class="content">
+
+<%- include(`partials/header`); %>
+
+<main class="main">
+
+    <!-- INSERT CODE HERE -->
+
+    <% for (let cat of categories) { %>
+    
+        <section class="section <% if (cat.id % 2 == 0) { %> primary-color-bg <% } else { %> secondary-color-bg <% } %>">
+            <div class="centered-container">
+                <h1 class="decorated-title font-secondary main-color">
+                    <span class="main-color-emphasized"><%= cat.name %></span> Inventory
+                </h1>
+                <div class="separator"></div>
+                <% if (cat.inventory.length == 0) { %>
+                    <div class="centered-container">
+                        <span class="photo-box-title font-secondary main-color">
+                            No items in this category
+                        </span>
+                    </div>
+                <% } else { %>
+                    <div class="gallery">
+                        <% for(let i of cat.inventory) { %>
+                            <div class="photo-box">
+                                <img class="photo-box-image" src="<%= i.imageurl %>"></img>
+                                <div class="photo-box-title font-secondary main-color">
+                                    <a class="link" href="/item/<%= i.id %>"><%= i.name %></a>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+
+    <% } %>
+
+</main>
+
+<%- include(`partials/footer`); %>
+
+</body>
+
+</html>
